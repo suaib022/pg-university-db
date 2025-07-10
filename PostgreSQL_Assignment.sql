@@ -35,7 +35,7 @@ VALUES
 ( 'Rafi', 24, 'rafi@example.com', 41, 40, NULL),
 ( 'Sophia', 22, 'sophia@example.com', 50, 52, NULL),
 ( 'Hasan', 23, 'hasan@gmail.com', 43, 39, NULL);
--- insertion into enrollment table
+-- insertion into course table
 INSERT INTO courses (course_id, course_name, credits)
 VALUES
 (1, 'Next.js', 3),
@@ -67,7 +67,7 @@ INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, sta
 VALUES
 ('Safi', 21, 'ssa222158@gmail.com', 45, 56, NULL);
 
--- query 2
+-- query 2: Retrieve the names of all students who are enrolled in the course titled 'Next.js'.
 SELECT student_name FROM enrollment 
 JOIN students USING (student_id)
 JOIN courses USING (course_id)
